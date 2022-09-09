@@ -1,42 +1,25 @@
 {
   "name": "crypted-vue-route",
-  "version": "0.0.4",
+  "description": "Crypted Vue Route is a library to encrypt and decrypt your routes in Vue 3 applications.",
+  "version": "0.0.6",
   "type": "module",
   "files": [
     "dist"
   ],
-  "main": "./dist/use-crypted-route.umd.js",
-  "module": "./dist/use-crypted-route.es.js",
+  "main": "./dist/crypted-vue-route.umd.js",
+  "module": "./dist/crypted-vue-route.es.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview --port 4173"
   },
   "dependencies": {
-    "fflate": "^0.7.3",
-    "pinia": "^2.0.21",
     "vue": "^3.2.38",
-    "vue-router": "^4.1.5"
+    "vue-router": "^4.1.5",
+    "fflate": "^0.7.3"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^3.0.3",
     "vite": "^3.0.9"
-  },
-  "description": "Crypted Vue Route is a library to encrypt and decrypt your routes in Vue 3",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/BirajMainali/crypted-vue-route.git"
-  },
-  "keywords": [
-    "crypted-vue-route",
-    "hash-vue-route",
-    "encrypted-vue-route",
-    "vue-route"
-  ],
-  "author": "Biraj Mainali",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/BirajMainali/crypted-vue-route/issues"
-  },
-  "homepage": "https://github.com/BirajMainali/crypted-vue-route#readme"
+  }
 }

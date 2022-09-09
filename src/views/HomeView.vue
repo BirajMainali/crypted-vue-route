@@ -1,10 +1,10 @@
 <script setup>
 import useCryptedRoute from "@/hooks/useCryptedRoute";
 
-const {getRoute, setRoute, route, router, state: filterState} = useCryptedRoute();
+const {setRouteData, state: filterState} = useCryptedRoute();
 
 const onSubmit = async () => {
-  await setRoute(filterState.value);
+  await setRouteData(filterState.value);
 };
 
 </script>
@@ -14,7 +14,6 @@ const onSubmit = async () => {
   <main>
     <input type="search" v-model="filterState.username"/>
     {{ filterState.username }}
-
     <button @click.prevent="onSubmit">CLick!</button>
 
   </main>
