@@ -6,6 +6,22 @@
   "files": [
     "dist"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BirajMainali/crypted-vue-route.git"
+  },
+  "keywords": [
+    "crypted-vue-route",
+    "hash-vue-route",
+    "encrypted-vue-route",
+    "vue-route"
+  ],
+  "author": "Biraj Mainali",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BirajMainali/crypted-vue-route/issues"
+  },
+  "homepage": "https://github.com/BirajMainali/crypted-vue-route#readme",
   "main": "./dist/crypted-vue-route.umd.js",
   "module": "./dist/crypted-vue-route.es.js",
   "scripts": {
