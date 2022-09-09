@@ -1,12 +1,12 @@
 {
   "name": "crypted-vue-route",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "type": "module",
   "files": [
     "dist"
   ],
   "main": "./dist/use-crypted-route.umd.js",
-    "module": "./dist/use-crypted-route.esm.js",
+  "module": "./dist/use-crypted-route.esm.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
