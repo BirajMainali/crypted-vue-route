@@ -1,12 +1,10 @@
 <script setup>
-import TheWelcome from '../components/TheWelcome.vue'
-import {onMounted, ref, watch} from "vue";
-import useHashRoute from "@/Hooks/useHashRoute";
+import useCryptedRoute from "@/Hooks/useCryptedRoute";
 
-const {set, get, state: filterState} = useHashRoute();
+const {getRoute, setRoute, route, router,  state: filterState} = useCryptedRoute();
 
-const onSubmit = () => {
-  set(filterState.value);
+const onSubmit = async () => {
+  await setRoute(filterState.value);
 };
 
 </script>
