@@ -1,5 +1,5 @@
 <script setup>
-import useCryptedRoute from "@/Hooks/useCryptedRoute";
+import useCryptedRoute from "@/hooks/useCryptedRoute";
 
 const {getRoute, setRoute, route, router, state: filterState} = useCryptedRoute();
 

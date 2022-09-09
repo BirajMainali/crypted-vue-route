@@ -1,4 +1,4 @@
-import useCrypter from "@/Hooks/useCrypter";
+import useCrypter from "@/hooks/useCrypter";
 import {onMounted, ref, watch} from "vue";
 import {useRoute, useRouter} from "vue-router";
 
