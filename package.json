@@ -1,6 +1,12 @@
 {
   "name": "crypted-vue-route",
   "version": "0.0.1",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/use-crypted-route.umd.js",
+    "module": "./dist/use-crypted-route.esm.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -17,7 +23,6 @@
     "vite": "^3.0.9"
   },
   "description": "Crypted Vue Route is a library to encrypt and decrypt your routes in Vue 3",
-  "main": "vite.config.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/BirajMainali/crypted-vue-route.git"
