@@ -20,9 +20,24 @@ yarn add crypted-vue-route
 
 ## Basic Usage
 ```js
-const {getRoute, setRoute, route, router, state: filterState} = useCryptedRoute();
-```
-    
+<script setup>
+    import {useCryptedRoute} from "crypted-vue-route";
+    const {setRouteData, getRouteData, route, router, state: filterState} = useCryptedRoute();
+    const onSubmit = async () => {
+    await setRouteData(filterState.value);
+};
+</script>
+
+<template>
+
+    <main>
+        <input type="search" v-model="filterState.username"/>
+        {{ filterState.username }}
+        <button @click.prevent="onSubmit">CLick!</button>
+
+</main>
+</template>
+``` 
 [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
 
 ## Customize configuration
