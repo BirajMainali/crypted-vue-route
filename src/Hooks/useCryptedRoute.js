@@ -14,11 +14,11 @@ const useCryptedRoute = (key = "state") => {
             name: route.name,
             params: route.params,
             query: {
-                key: encrypted
+                [key]: encrypted
             }
         })
     }
-    const getRoute = async () => {
+    const getRoute = () => {
         if (!route.query.state) return {};
         const decrypted = crypter.decrypt(route.query[key]);
         return JSON.parse(decrypted);
