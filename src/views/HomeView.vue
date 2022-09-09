@@ -1,23 +1,23 @@
 <script setup>
 import TheWelcome from '../components/TheWelcome.vue'
-import {onMounted} from "vue";
+import {onMounted, ref, watch} from "vue";
 import useHashRoute from "@/Hooks/useHashRoute";
 
-const hashRoute = useHashRoute();
+const {set, get, state: filterState} = useHashRoute();
 
-onMounted(() => {
-  hashRoute.set({
-    x: [1, 2, 3, 4, 5, 5, 5, 5, 5, 55,],
-    y: [1, 2, 3, 4, 5, 5, 5, 5, 5, 55,],
-    z: [1, 2, 3, 4, 5, 5, 5, 5, 5, 55,]
-  });
-  console.log(hashRoute.get());
-})
+const onSubmit = () => {
+  set(filterState.value);
+};
+
 </script>
 
 <template>
 
   <main>
-    <TheWelcome/>
+    <input type="search" v-model="filterState.username"/>
+    {{filterState.username}}
+
+    <button @click.prevent="onSubmit">CLick!</button>
+
   </main>
 </template>
