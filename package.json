@@ -1,7 +1,7 @@
 {
   "name": "crypted-vue-route",
   "description": "Crypted Vue Route is a library to encrypt and decrypt your routes in Vue 3 applications.",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "type": "module",
   "files": [
     "dist"
