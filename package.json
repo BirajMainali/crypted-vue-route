@@ -1,5 +1,5 @@
 {
-  "name": " hash-route",
+  "name": "crypted-vue-route",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
@@ -15,5 +15,23 @@
   "devDependencies": {
     "@vitejs/plugin-vue": "^3.0.3",
     "vite": "^3.0.9"
-  }
+  },
+  "description": "Crypted Vue Route is a library to encrypt and decrypt your routes in Vue 3",
+  "main": "vite.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BirajMainali/crypted-vue-route.git"
+  },
+  "keywords": [
+    "crypted-vue-route",
+    "hash-vue-route",
+    "encrypted-vue-route",
+    "vue-route"
+  ],
+  "author": "Biraj Mainali",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BirajMainali/crypted-vue-route/issues"
+  },
+  "homepage": "https://github.com/BirajMainali/crypted-vue-route#readme"
 }
