@@ -6,7 +6,7 @@
     "dist"
   ],
   "main": "./dist/use-crypted-route.umd.js",
-  "module": "./dist/use-crypted-route.esm.js",
+  "module": "./dist/use-crypted-route.es.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
