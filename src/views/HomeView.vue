@@ -14,7 +14,7 @@ const onSubmit = async () => {
   <main>
     <input type="search" v-model="filterState.username"/>
     {{ filterState.username }}
-    <button @click.prevent="onSubmit">CLick!</button>
+    <button @click.prevent="onSubmit">Click!</button>
 
   </main>
 </template>
