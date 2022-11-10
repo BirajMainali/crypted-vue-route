@@ -12,8 +12,7 @@ const onSubmit = async () => {
 <template>
 
   <main>
-    <input type="search" v-model="filterState.username"/>
+    <textarea v-model="filterState.username" cols="80" rows="10"/>
     <button @click.prevent="onSubmit">Click!</button>
-
   </main>
 </template>

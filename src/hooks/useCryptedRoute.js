@@ -1,15 +1,15 @@
-import useCrypter from "./useCrypter.js";
 import {onMounted, ref, watch} from "vue";
 import {useRoute, useRouter} from "vue-router";
+import {useCrypter} from "short-crypter/src/hooks/index.js";
 
-const crypter = useCrypter();
+const {encrypt, decrypt} = useCrypter();
 const useCryptedRoute = (key = "state") => {
     const router = useRouter()
     const route = useRoute();
     const state = ref({});
 
     const setRouteData = async (params) => {
-        const encrypted = crypter.encrypt(JSON.stringify(params));
+        const encrypted = encrypt(JSON.stringify(params));
         await router.push({
             name: route.name,
             params: route.params,
@@ -20,7 +20,7 @@ const useCryptedRoute = (key = "state") => {
     }
     const getRouteData = () => {
         if (!route.query[key]) return {};
-        const decrypted = crypter.decrypt(route.query[key]);
+        const decrypted = decrypt(route.query[key]);
         return JSON.parse(decrypted);
     }
 

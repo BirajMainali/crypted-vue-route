@@ -1,15 +1,15 @@
-import { ref as Br, watch as Or, onMounted as Jr } from "vue";
-import { useRouter as Pr, useRoute as Yr } from "vue-router";
-var T = Uint8Array, q = Uint16Array, nr = Uint32Array, vr = new T([0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 0, 0, 0, 0]), fr = new T([0, 0, 0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12, 12, 13, 13, 0, 0]), cr = new T([16, 17, 18, 0, 8, 7, 9, 6, 10, 5, 11, 4, 12, 3, 13, 2, 14, 1, 15]), Rr = function(r, n) {
+import { ref as Nr, watch as Br, onMounted as Or } from "vue";
+import { useRouter as Jr, useRoute as Pr } from "vue-router";
+var T = Uint8Array, q = Uint16Array, nr = Uint32Array, vr = new T([0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 0, 0, 0, 0]), fr = new T([0, 0, 0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12, 12, 13, 13, 0, 0]), cr = new T([16, 17, 18, 0, 8, 7, 9, 6, 10, 5, 11, 4, 12, 3, 13, 2, 14, 1, 15]), mr = function(r, n) {
   for (var e = new q(31), a = 0; a < 31; ++a)
     e[a] = n += 1 << r[a - 1];
   for (var v = new nr(e[30]), a = 1; a < 30; ++a)
     for (var f = e[a]; f < e[a + 1]; ++f)
       v[f] = f - e[a] << 5 | a;
   return [e, v];
-}, Ur = Rr(vr, 2), qr = Ur[0], hr = Ur[1];
-qr[28] = 258, hr[258] = 28;
-var Dr = Rr(fr, 0), Wr = Dr[0], Tr = Dr[1], wr = new q(32768);
+}, Rr = mr(vr, 2), Ur = Rr[0], hr = Rr[1];
+Ur[28] = 258, hr[258] = 28;
+var qr = mr(fr, 0), Yr = qr[0], Tr = qr[1], wr = new q(32768);
 for (var h = 0; h < 32768; ++h) {
   var _ = (h & 43690) >>> 1 | (h & 21845) << 1;
   _ = (_ & 52428) >>> 2 | (_ & 13107) << 2, _ = (_ & 61680) >>> 4 | (_ & 3855) << 4, wr[h] = ((_ & 65280) >>> 8 | (_ & 255) << 8) >>> 1;
@@ -44,7 +44,7 @@ for (var h = 280; h < 288; ++h)
 var er = new T(32);
 for (var h = 0; h < 32; ++h)
   er[h] = 5;
-var Gr = /* @__PURE__ */ X($, 9, 0), Hr = /* @__PURE__ */ X($, 9, 1), Ir = /* @__PURE__ */ X(er, 5, 0), Kr = /* @__PURE__ */ X(er, 5, 1), ir = function(r) {
+var Wr = /* @__PURE__ */ X($, 9, 0), Gr = /* @__PURE__ */ X($, 9, 1), Hr = /* @__PURE__ */ X(er, 5, 0), Ir = /* @__PURE__ */ X(er, 5, 1), ir = function(r) {
   for (var n = r[0], e = 1; e < r.length; ++e)
     r[e] > n && (n = r[e]);
   return n;
@@ -60,7 +60,7 @@ var Gr = /* @__PURE__ */ X($, 9, 0), Hr = /* @__PURE__ */ X($, 9, 1), Ir = /* @_
   (n == null || n < 0) && (n = 0), (e == null || e > r.length) && (e = r.length);
   var a = new (r.BYTES_PER_ELEMENT == 2 ? q : r.BYTES_PER_ELEMENT == 4 ? nr : T)(e - n);
   return a.set(r.subarray(n, e)), a;
-}, Qr = [
+}, Kr = [
   "unexpected EOF",
   "invalid block type",
   "invalid length/literal",
@@ -76,11 +76,11 @@ var Gr = /* @__PURE__ */ X($, 9, 0), Hr = /* @__PURE__ */ X($, 9, 1), Ir = /* @_
   "stream finishing",
   "invalid zip data"
 ], H = function(r, n, e) {
-  var a = new Error(n || Qr[r]);
+  var a = new Error(n || Kr[r]);
   if (a.code = r, Error.captureStackTrace && Error.captureStackTrace(a, H), !e)
     throw a;
   return a;
-}, Vr = function(r, n, e) {
+}, Qr = function(r, n, e) {
   var a = r.length;
   if (!a || e && e.f && !e.l)
     return n || new T(0);
@@ -99,7 +99,7 @@ var Gr = /* @__PURE__ */ X($, 9, 0), Hr = /* @__PURE__ */ X($, 9, 1), Ir = /* @_
       var x = G(r, i + 1, 3);
       if (i += 3, x)
         if (x == 1)
-          t = Hr, g = Kr, s = 9, w = 5;
+          t = Gr, g = Ir, s = 9, w = 5;
         else if (x == 2) {
           var I = G(r, i, 31) + 257, Y = G(r, i + 10, 15) + 4, D = I + G(r, i + 5, 31) + 1;
           i += 14;
@@ -152,11 +152,11 @@ var Gr = /* @__PURE__ */ X($, 9, 0), Hr = /* @__PURE__ */ X($, 9, 1), Ir = /* @_
         var O = Q - 254;
         if (Q > 264) {
           var u = Q - 257, W = vr[u];
-          O = G(r, i, (1 << W) - 1) + qr[u], i += W;
+          O = G(r, i, (1 << W) - 1) + Ur[u], i += W;
         }
         var V = g[lr(r, i) & B], U = V >>> 4;
         V || H(3), i += V & 15;
-        var M = Wr[U];
+        var M = Yr[U];
         if (U > 3) {
           var W = fr[U];
           M += lr(r, i) & (1 << W) - 1, i += W;
@@ -283,7 +283,7 @@ var Gr = /* @__PURE__ */ X($, 9, 0), Hr = /* @__PURE__ */ X($, 9, 1), Ir = /* @_
         Z(n, t, Q[U]), t += m[U], U > 15 && (Z(n, t, V[u] >>> 5 & 127), t += V[u] >>> 12);
       }
   } else
-    M = Gr, E = $, B = Ir, J = er;
+    M = Wr, E = $, B = Hr, J = er;
   for (var u = 0; u < c; ++u)
     if (a[u] > 255) {
       var U = a[u] >>> 18 & 31;
@@ -293,7 +293,7 @@ var Gr = /* @__PURE__ */ X($, 9, 0), Hr = /* @__PURE__ */ X($, 9, 1), Ir = /* @_
     } else
       d(n, t, M[a[u]]), t += E[a[u]];
   return d(n, t, M[256]), t + E[256];
-}, Xr = /* @__PURE__ */ new nr([65540, 131080, 131088, 131104, 262176, 1048704, 1048832, 2114560, 2117632]), Mr = /* @__PURE__ */ new T(0), Zr = function(r, n, e, a, v, f) {
+}, Vr = /* @__PURE__ */ new nr([65540, 131080, 131088, 131104, 262176, 1048704, 1048832, 2114560, 2117632]), Mr = /* @__PURE__ */ new T(0), Xr = function(r, n, e, a, v, f) {
   var l = r.length, c = new T(a + l + 5 * (1 + Math.ceil(l / 7e3)) + v), i = c.subarray(a, c.length - v), o = 0;
   if (!n || l < 8)
     for (var t = 0; t <= l; t += 65535) {
@@ -301,7 +301,7 @@ var Gr = /* @__PURE__ */ X($, 9, 0), Hr = /* @__PURE__ */ X($, 9, 1), Ir = /* @_
       g >= l && (i[o >> 3] = f), o = sr(i, o + 1, r.subarray(t, g));
     }
   else {
-    for (var s = Xr[n - 1], w = s >>> 13, z = s & 8191, x = (1 << e) - 1, y = new q(32768), P = new q(x + 1), b = Math.ceil(e / 3), I = 2 * b, Y = function(or) {
+    for (var s = Vr[n - 1], w = s >>> 13, z = s & 8191, x = (1 << e) - 1, y = new q(32768), P = new q(x + 1), b = Math.ceil(e / 3), I = 2 * b, Y = function(or) {
       return (r[or] ^ r[or + 1] << b ^ r[or + 2] << I) & x;
     }, D = new nr(25e3), S = new q(288), C = new q(32), u = 0, K = 0, t = 0, m = 0, L = 0, A = 0; t < l; ++t) {
       var N = Y(t), F = t & 32767, R = P[N];
@@ -324,7 +324,7 @@ var Gr = /* @__PURE__ */ X($, 9, 0), Hr = /* @__PURE__ */ X($, 9, 1), Ir = /* @_
                 if (B = k, J = O, k > W)
                   break;
                 for (var ar = Math.min(O, k - 2), p = 0, E = 0; E < ar; ++E) {
-                  var j = t - O + E + 32768 & 32767, Nr = y[j], Er = j - Nr + 32768 & 32767;
+                  var j = t - O + E + 32768 & 32767, Dr = y[j], Er = j - Dr + 32768 & 32767;
                   Er > p && (p = Er, R = j);
                 }
               }
@@ -342,7 +342,7 @@ var Gr = /* @__PURE__ */ X($, 9, 0), Hr = /* @__PURE__ */ X($, 9, 1), Ir = /* @_
     o = Fr(r, i, f, D, S, C, K, m, A, t - A, o), !f && o & 7 && (o = sr(i, o + 1, Mr));
   }
   return tr(c, 0, a + Cr(o) + v);
-}, _r = function() {
+}, Zr = function() {
   var r = 1, n = 0;
   return {
     p: function(e) {
@@ -357,33 +357,33 @@ var Gr = /* @__PURE__ */ X($, 9, 0), Hr = /* @__PURE__ */ X($, 9, 1), Ir = /* @_
       return r %= 65521, n %= 65521, (r & 255) << 24 | r >>> 8 << 16 | (n & 255) << 8 | n >>> 8;
     }
   };
-}, $r = function(r, n, e, a, v) {
-  return Zr(r, n.level == null ? 6 : n.level, n.mem == null ? Math.ceil(Math.max(8, Math.min(13, Math.log(r.length))) * 1.5) : 12 + n.mem, e, a, !v);
-}, Lr = function(r, n, e) {
+}, _r = function(r, n, e, a, v) {
+  return Xr(r, n.level == null ? 6 : n.level, n.mem == null ? Math.ceil(Math.max(8, Math.min(13, Math.log(r.length))) * 1.5) : 12 + n.mem, e, a, !v);
+}, $r = function(r, n, e) {
   for (; e; ++n)
     r[n] = e, e >>>= 8;
-}, jr = function(r, n) {
+}, Lr = function(r, n) {
   var e = n.level, a = e == 0 ? 0 : e < 6 ? 1 : e == 9 ? 3 : 2;
   r[0] = 120, r[1] = a << 6 | (a ? 32 - 2 * a : 1);
-}, pr = function(r) {
+}, jr = function(r) {
   ((r[0] & 15) != 8 || r[0] >>> 4 > 7 || (r[0] << 8 | r[1]) % 31) && H(6, "invalid zlib data"), r[1] & 32 && H(6, "invalid zlib data: preset dictionaries not supported");
 };
-function dr(r, n) {
+function pr(r, n) {
   n || (n = {});
-  var e = _r();
+  var e = Zr();
   e.p(r);
-  var a = $r(r, n, 2, 4);
-  return jr(a, n), Lr(a, a.length - 4, e.d()), a;
+  var a = _r(r, n, 2, 4);
+  return Lr(a, n), $r(a, a.length - 4, e.d()), a;
 }
-function re(r, n) {
-  return Vr((pr(r), r.subarray(2, -4)), n);
+function dr(r, n) {
+  return Qr((jr(r), r.subarray(2, -4)), n);
 }
-var kr = typeof TextEncoder < "u" && /* @__PURE__ */ new TextEncoder(), yr = typeof TextDecoder < "u" && /* @__PURE__ */ new TextDecoder(), ee = 0;
+var kr = typeof TextEncoder < "u" && /* @__PURE__ */ new TextEncoder(), yr = typeof TextDecoder < "u" && /* @__PURE__ */ new TextDecoder(), re = 0;
 try {
-  yr.decode(Mr, { stream: !0 }), ee = 1;
+  yr.decode(Mr, { stream: !0 }), re = 1;
 } catch {
 }
-var ae = function(r) {
+var ee = function(r) {
   for (var n = "", e = 0; ; ) {
     var a = r[e++], v = (a > 127) + (a > 223) + (a > 239);
     if (e + v > r.length)
@@ -419,23 +419,23 @@ function br(r, n) {
   } else {
     if (yr)
       return yr.decode(r);
-    var v = ae(r), f = v[0], l = v[1];
+    var v = ee(r), f = v[0], l = v[1];
     return l.length && H(8), f;
   }
 }
-const ne = () => ({ encrypt: (e) => {
-  const a = zr(e), v = dr(a, { level: 9 }), f = br(v, !0);
+const ae = () => ({ encrypt: (e) => {
+  const a = zr(e), v = pr(a, { level: 9 }), f = br(v, !0);
   return btoa(f);
 }, decrypt: (e) => {
   const a = atob(e);
   if (a.startsWith("x\xDA")) {
-    const v = zr(a, !0), f = re(v);
+    const v = zr(a, !0), f = dr(v);
     return br(f);
   }
   return a;
-} }), mr = ne(), te = (r = "state") => {
-  const n = Pr(), e = Yr(), a = Br({}), v = async (l) => {
-    const c = mr.encrypt(JSON.stringify(l));
+} }), { encrypt: ne, decrypt: ve } = ae(), oe = (r = "state") => {
+  const n = Jr(), e = Pr(), a = Nr({}), v = async (l) => {
+    const c = ne(JSON.stringify(l));
     await n.push({
       name: e.name,
       params: e.params,
@@ -446,15 +446,15 @@ const ne = () => ({ encrypt: (e) => {
   }, f = () => {
     if (!e.query[r])
       return {};
-    const l = mr.decrypt(e.query[r]);
+    const l = ve(e.query[r]);
     return JSON.parse(l);
   };
-  return Or(() => e == null ? void 0 : e.query, () => {
+  return Br(() => e == null ? void 0 : e.query, () => {
     a.value = f();
-  }), Jr(() => {
+  }), Or(() => {
     a.value = f();
   }), { setRouteData: v, getRouteData: f, state: a, route: e, router: n };
 };
 export {
-  te as useCryptedRoute
+  oe as useCryptedRoute
 };
