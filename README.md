@@ -18,6 +18,8 @@ npm i crypted-vue-route
 yarn add crypted-vue-route
 ```
 
+> It is important to set up your project with Vue Router because this library externalizes the routing functionality, providing flexibility to customize and add your own version of routes
+
 ## Basic Usage
 ```js
 <script setup>
